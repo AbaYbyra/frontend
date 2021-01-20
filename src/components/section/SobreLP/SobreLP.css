@@ -1,0 +1,28 @@
+.sobre-block{
+  padding: 66px 60px;
+}
+
+.sobre-article{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.sobre-article .button{
+  align-self: flex-end;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+.sobre-image {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  width: 400px;
+}
+.sobre-image img{
+  object-fit: contain;
+  width:100%;
+  max-width: 400px;
+  max-height:400px;
+}

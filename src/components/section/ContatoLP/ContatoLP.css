@@ -1,0 +1,25 @@
+.doe-body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#doe-form{
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+}
+
+#doe-form input{
+  margin: 16px 0;
+  border: 1px solid var(--main-color);
+}
+
+.alignRight{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+}

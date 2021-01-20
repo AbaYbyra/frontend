@@ -1,0 +1,44 @@
+.footer-lp{
+  background-image:url('../../assets/bg_verde_claro.svg');
+  color: white;
+}
+
+
+.footer-body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  padding-bottom:0;
+  width: 100%;
+}
+.footer-pages-list{
+ text-align: left;
+ padding-left: 1rem;
+ 
+ padding:0;
+}
+
+.footer-pages-list ul li{
+  list-style-type: none;
+  font-weight: bold;
+}
+.footer-pages-list ul li a{
+  color: white;
+}
+.footer-social-media{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right:1rem;
+}
+.footer-social-media img{
+  width: 50px;
+  padding: 10px;
+}
+
+.footer-copyright{
+  color: white;
+}
