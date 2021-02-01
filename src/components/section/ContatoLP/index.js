@@ -41,10 +41,11 @@ export default function ContatoLP(){
                   <Form.Control as="textarea" rows={3} placeholder="Escreva sua mensagem..."/>
                 </Col>
               </Form.Row>
+              <div className="alignRight">
+                <button type='submit' form='doe-form' className="button button-primary">Enviar</button>
+              </div>
             </Form>
-            <div className="alignRight">
-              
-            </div>
+            
           </Col>
       
 

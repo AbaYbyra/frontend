@@ -1,6 +1,10 @@
 :root{
   --main-color: #79EC77;
   --secondary-color: #126206;
+
+  --color-button-primary: #F83600;
+  --color-button-secondary: #BF0000;
+  --color-button-terciary: #FAC321;
 }
 
 body {
