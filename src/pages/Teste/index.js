@@ -18,10 +18,8 @@ export default function Teste(props){
   const [pictureURL, setPictureURL ] = useState("ola-contato.jpg")
 
   function onDrop (pictureFiles, pictureDataURLs){
-    console.log("ENTROU")
     setPicture(pictureFiles)
     setPictureURL(pictureDataURLs)
-    console.log("PICTURES: " , pictureFiles, '\n', pictureDataURLs[0])
   }
   return(
     <div className="teste-container">

@@ -1,11 +1,8 @@
-import { useRouteMatch } from 'react-router-dom';
 import CardSession from '../../components/CardSession';
 import SectionTitle from '../../components/SectionTitle';
-import SideMenu from '../../templates/SideMenu';
 import './FirstPageProfile.css'
 
 export default function FirstPageProfile(props){
-  let { path, url } = useRouteMatch();
   let rota = props.theme == 'school' ? "escola" : "professor"
   return(
     <>
@@ -14,7 +11,7 @@ export default function FirstPageProfile(props){
       <section className="main-section">
         <CardSession path={`/${rota}/blog`} bg_image='bgs/water.jpg' text="Blog"/>
         <CardSession path={`/${rota}/material-docente`} bg_image='bgs/green.jpg' text="Material de Ensino"/>
-        <CardSession path="#" bg_image='bgs/sky.jpg' text="Material de Aprendizado"/>
+        <CardSession path={`/${rota}/aprendizado`} bg_image='bgs/sky.jpg' text="Material de Aprendizado"/>
         {props.theme==="school"?
           <CardSession path="#" bg_image='bgs/fire.jpg' text="Posts"/>
           : null

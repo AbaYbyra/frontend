@@ -13,7 +13,6 @@ function Login(props){
 
   async function login(e){
     e.preventDefault();
-    console.log(e.target)
 
     fetch("https://abaybyra-online.umbler.net/auth_post", { 
       method: "post",
@@ -21,16 +20,13 @@ function Login(props){
     })
     .then(resposta => resposta.json())
     .then(resultado => {
-      console.log(resultado)
       if(resultado[0].professor){
-        console.log("RESULTADO 0: ", resultado.professor)
         fetch("https://abaybyra-online.umbler.net/teacher_profile_post", { 
           method: "post",
           body: new FormData(e.target) 
         })
         .then(resposta => resposta.json())
         .then(res => {
-          console.log(res[0])
           if(res){
             props.setUser(res[0])
             history.push('/professor')
@@ -41,14 +37,12 @@ function Login(props){
         })
       }
       else if(resultado[0].escola){
-        console.log("RESULTADO 1: ", resultado.escola)
         fetch("https://abaybyra-online.umbler.net/escola_profile_post", { 
           method: "post",
           body: new FormData(e.target) 
         })
         .then(resposta => resposta.json())
         .then(res => {
-          console.log(res[0])
           if(res){
             props.setUser(res[0])
             history.push('/escola')

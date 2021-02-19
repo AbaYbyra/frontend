@@ -3,7 +3,7 @@ import React from 'react';
 import './CardMaterial.css'
 
 export default function CardMaterial(props){
-  let {path, icon, theme, text } = props;
+  let {path, icon, theme, text, disabled } = props;
  
   let color = `var(--color-${theme})`
 
@@ -12,6 +12,7 @@ export default function CardMaterial(props){
       className="cardMaterial" 
       href={path}
       style={{backgroundColor: color}}
+      disabled={disabled ? true : false}
       >
       <div className="img-container-cMaterial">
         <img 

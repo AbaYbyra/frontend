@@ -5,3 +5,6 @@ bgs/green: Photo by <a href="/photographer/adrianard-32778">adrian ardizza</a> f
 bgs/sky: Photo by <a href="/photographer/Shmoo18-41938">Shmoo18</a> from <a href="https://freeimages.com/">FreeImages</a>
 
 bgs/fire: <a href='https://br.freepik.com/fotos/viagem'>Viagem foto criado por jeswin - br.freepik.com</a>
+
+assets/icon_test_a = https://iconmonstr.com/school-13-png/
+assets/icon_block_letters= https://iconmonstr.com/school-9-png/

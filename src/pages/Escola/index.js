@@ -10,6 +10,7 @@ import ProfileSchool from '../Profile/ProfileSchool';
 import SobreProfessor from '../Sobre/SobreProfessor';
 import Contatos from '../Contatos';
 import ProfessorList from '../ProfessorList';
+import Aprendizado from '../Aprendizado';
 
 import { Store } from '../../store';
 import './Escola.css';
@@ -44,6 +45,9 @@ export default function PaginaInicial(){
             </Route>
             <Route path={`${url}/material-docente`}>
               <MaterialDocenteMenu theme="school"/>  
+            </Route>
+            <Route path={`${url}/aprendizado`}>
+              <Aprendizado theme="school"/>  
             </Route>
             <Route path={`${url}/professores`}>
               <ProfessorList theme="school"/>  

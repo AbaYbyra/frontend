@@ -1,0 +1,15 @@
+.section-tutoriais{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  align-items: center;
+  justify-items: center;
+}
+
+@media(max-width: 320px){
+  .section-tutoriais{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+  }
+}
