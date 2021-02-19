@@ -1,0 +1,12 @@
+.section-fpprofile{
+  height: calc(100vh - 90px);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-around;
+
+  grid-area: bodyarea;
+}
+

@@ -1,0 +1,21 @@
+.profile-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+}
+
+#form-update-professor{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0px;
+  min-width: 300px;
+  width: 70%;
+  text-align: left;
+}
+
+.wrong-input {
+  padding-left: 0.5rem;
+  font-size: 0.75rem;
+  color: red;
+}

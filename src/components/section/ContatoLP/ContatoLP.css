@@ -1,17 +1,12 @@
-.doe-body{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
-#doe-form{
+#contato-form{
   display: flex;
   flex-direction: column;
 
   justify-content: space-evenly;
 }
 
-#doe-form input{
+#contato-form input{
   margin: 16px 0;
   border: 1px solid var(--main-color);
 }
@@ -22,4 +17,28 @@
   flex-direction: row;
   justify-content: flex-end;
 
+}
+
+.contato-forms-img{
+  display:flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image-contato{
+  width: 50%;
+}
+.image-contato img{
+  max-width: 350px;
+  min-width: 220px;
+  width: 70%;
+}
+
+@media (max-width:768px){
+  .contato-forms-img{
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }

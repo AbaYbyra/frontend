@@ -1,0 +1,64 @@
+.cardMaterial{
+  --side: 240px;
+  width: var(--side);
+  height: var(--side);
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.55);
+  
+  opacity: 80%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; 
+  color: white;   
+  margin: 10px;
+
+}
+
+/* fork from 
+  https://codepen.io/thebabydino/pen/VRXaRJ
+*/
+.cardMaterial:before {
+  position: absolute;
+  z-index: -1; 
+  top: -1px; right: -1px; bottom: -1px; left: -1px;
+  border: inherit;
+  border-color: transparent;
+  background: inherit;
+  background-clip: border-box;
+  /* -webkit-prefixed version 
+    * still needed for 
+    * some mobile browsers 💔😭 */
+  -webkit-filter: blur(9px);
+          filter: blur(9px);
+  content: ''
+}
+
+.cardMaterial:hover{
+  color: white;
+  width: calc(var(--side) * 1.1);
+  height: calc(var(--side) * 1.1);
+  transition: 1s;
+}
+.img-container-cMaterial{
+  width: 80%;
+  height: 98px;
+}
+
+.imgCardMaterial{
+  width:100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: contain;
+}
+.textCardMaterial{
+  font-family: 'Righteous', cursive;
+  font-size: 3rem;
+  margin: 0.5rem;
+  color: white;
+  text-align: left;
+  line-height: 80%;
+}
+

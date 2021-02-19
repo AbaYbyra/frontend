@@ -1,0 +1,88 @@
+.side-menu{
+  background-color: #C8C8C8;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  z-index:10;
+  border-radius: 0px 10px 10px 0px;
+  overflow: hidden;
+  color: white;
+  grid-area: sidemenu;
+}
+.side-menu.student{
+  background-color: var(--color-student-sec);
+}
+.side-menu.professor{
+  background-color: var(--color-professor-sec);
+}
+.side-menu.school{
+  background-color: var(--color-school-sec);
+}
+.side-menu.opened{
+  width: 200px;
+  transition: 0.5s;
+}
+.side-menu.closed{
+  width: 20px;
+  transition: 0.5s;
+}
+.side-menu-opener{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #A1A1A1;
+  font-weight: 600;
+}
+.side-menu-opener.student{
+  background-color: var(--color-student);
+  border: 1 solid var(--color-student);
+  box-shadow: inset 0 0 10px var(--color-student-sec);  
+  /* color: var(--color-student-sec); */
+}
+.side-menu-opener.professor{
+  background-color: var(--color-professor);
+  border: 1 solid var(--color-professor);
+  box-shadow: inset 0 0 10px var(--color-professor-sec);  
+  /* color: var(--color-professor-sec); */
+}
+.side-menu-opener.school{
+  background-color: var(--color-school);
+  border: 1 solid var(--color-school);
+  box-shadow: inset 0 0 10px var(--color-school-sec);
+  /* color: var(--color-school-sec);   */
+}
+
+.side-menu-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.side-menu-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  padding: 5rem 0;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 500px){
+  .side-menu{
+    height:100vh;
+    bottom:0;
+    position:fixed;
+  }
+  .side-menu.opened{
+    width: 100%;
+    transition: 0.5s;
+  }
+}

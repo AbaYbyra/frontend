@@ -1,0 +1,20 @@
+.main-sobre{
+  padding: 1rem;
+  width: 100%;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-sobre div{
+  width: 80%;
+  margin: 2rem 0;
+}
+
+.sobre-prof{
+  justify-self: center;
+  width: 80%;
+  margin: 2rem 0;
+  padding: 1rem;
+  text-align: justify;
+}
