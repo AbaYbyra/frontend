@@ -36,7 +36,8 @@ code {
 }
 
 a[disabled]{
-  opacity: 10%;
+  opacity: 0.8;
+  pointer-events: none;
 }
 a.disabled{
   color: #d1d1d1 !important;

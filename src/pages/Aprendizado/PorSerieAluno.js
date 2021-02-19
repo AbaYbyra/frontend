@@ -1,14 +1,14 @@
 import {useState} from 'react';
 import { Form } from 'react-bootstrap'
-import SectionTitle from "../../../components/SectionTitle";
+import SectionTitle from "../../components/SectionTitle";
 
-import * as data from '../../../json/material-docente.json';
-import CardBlog from '../../../components/CardBlog';
-import CardVideo from '../../../components/CardVideo';
+import * as data from '../../json/material-discente.json';
+import CardBlog from '../../components/CardBlog';
+import CardVideo from '../../components/CardVideo';
 
-import './PorSerie.css';
+import './PorSerieAluno.css';
 
-export default function PorSerie(props){
+export default function PorSerieAluno(props){
   const [material, setMaterial] = useState(data.default)
 
   function selectSerie(e){
@@ -24,7 +24,7 @@ export default function PorSerie(props){
   }
   return(
     <>
-      <SectionTitle theme={props.theme}>Material por série</SectionTitle>
+      <SectionTitle theme={props.theme}>Conteúdo por Série</SectionTitle>
       <section className="material-por-serie">
         
         <Form className="matdoc-select">
@@ -42,7 +42,7 @@ export default function PorSerie(props){
       
       <section className="articles">
         {material && material.map((item,index) =>{
-          if(item.type === "artigo"){
+          if(item.type === "exercicios"){
             return (
               <CardBlog 
                 key={`article-${index}`}
@@ -53,7 +53,7 @@ export default function PorSerie(props){
                 path={item.url}
               />
             )
-          }else if (item.type === "tutorial"){
+          }else if (item.type === "conteudo"){
             return(
               <CardVideo key={`tut-${index}`} theme={props.theme} tutorial={item}/>         
             )

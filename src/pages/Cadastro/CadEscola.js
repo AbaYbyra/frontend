@@ -34,8 +34,6 @@ export default function CadEscola(){
   }
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("EVENTO:", event.target)
-    console.log("Values:", event.target.publica.value)
     
     fetch("https://abaybyra-online.umbler.net/add_escola", 
     { method: "POST", 
@@ -43,11 +41,6 @@ export default function CadEscola(){
     })
     .then(response => response.json())
     .then(result => {  
-      console.log("ERRORS: ", typeof result.errors)   
-      console.log(typeof result.errors === 'undefined') 
-      console.log("ERROR: ", typeof result.error)   
-      console.log(typeof result.error === 'undefined') 
-      console.log(result) 
 
       if(typeof result.errors === 'undefined' && typeof result.error === 'undefined'){        
         alert("Cadastro realizado com sucesso!");
@@ -55,7 +48,6 @@ export default function CadEscola(){
       }
       else{
         if(!(typeof result.error === 'undefined')){
-          console.log(result.error)
           alert("Falha no cadastro. \nPor favor, tente novamente mais tarde.");
         }      
         else{

@@ -8,7 +8,6 @@ import * as UserAction from '../../actions/userActions';
 
 import SectionTitle from "../../components/SectionTitle";
 import ButtonAY from '../../components/ButtonAY';
-import SideMenu from "../../templates/SideMenu";
 import UpdateProfilePicture from './UpdateProfilePic';
 
 import {validate_data} from '../validate_data.js';
@@ -19,26 +18,21 @@ import './Profile.css';
 function Profile(props){
   const [messageConfirmSenha, setMessageConfirmSenha] = useState("");
   const [messageSenha, setMessageSenha] = useState("");
-  const [isDisabled, setIsDisabled] = useState(false);
   const [user, setUser] = useState({});
   const history = useHistory();
 
-  console.log(props.user.user)
   useEffect(()=>{
     setUser(props.user.user)
   },[])
 
   function handleSubmit(e){
     e.preventDefault()
-    console.log(e.target)
-    console.log("Enviado")
     fetch("https://abaybyra-online.umbler.net/teacher_update", { 
       method: "post",
       body: new FormData(e.target) 
     })
     .then(resposta => resposta.json())
     .then(res => {
-      console.log(res)
       if(res){
         props.setUser()
         alert("Dados atualizados com sucesso!")
@@ -54,26 +48,20 @@ function Profile(props){
 
     if (campo === 'confirmSenha'){
       setMessageConfirmSenha(message)
-      messageConfirmSenha === "" && messageSenha === "" ? 
-        setIsDisabled(false) : setIsDisabled(true)
     } 
     else if(campo === 'senha'){
       setMessageSenha(message)
       setMessageConfirmSenha(message2)
-      messageConfirmSenha === "" && messageSenha === "" ? 
-        setIsDisabled(false) : setIsDisabled(true)
     }
   }
 
   function deleteAccount(e){
     e.preventDefault();
-    console.log(props.user.user.escola_id)
     fetch(`http://abaybyra-online.umbler.net/delete_prof/${props.user.user.escola_id}/${props.user.user.professor_id}`, { 
       method: "get"
     })
     .then(resposta => resposta.json())
     .then(res => {
-      console.log(res)
       if(res === 1){
         props.setUser()
         alert("Cadastro excluído com sucesso!")
@@ -87,7 +75,6 @@ function Profile(props){
 
   return(
     <>
-    {/* <SideMenu theme="professor"/> */}
     <div className="ghost-grid"/>
     <SectionTitle theme="professor">Meus Dados</SectionTitle>
 

@@ -5,10 +5,8 @@ import './SideMenu.css';
 export default function SideMenu(props){
   const {theme,children, title} = props;
   const [open, setOpen] = useState(false);
-  console.log(children)
   function openClose(e){
     e.preventDefault();
-    console.log(open)
     const isOpen = open
     setOpen(!isOpen)
   }

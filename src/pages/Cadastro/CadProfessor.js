@@ -14,23 +14,18 @@ export default function CadProfessor(){
   
   function handleSubmit(e){
     e.preventDefault()
-    console.log("Enviado")
-    console.log("EVENTO:", e.target)
     fetch("https://abaybyra-online.umbler.net/add_prof", 
     { method: "POST", 
       body: new FormData(e.target) 
     })
     .then(response => response.json())
     .then(result => {  
-      console.log(result)     
-
       if(typeof result.errors === 'undefined' && typeof result.error === 'undefined'){        
         alert("Cadastro realizado com sucesso!");
         history.push('/')
       }
       else{
         if(!(typeof result.error === 'undefined')){
-          console.log(result.error)
           alert("Falha no cadastro. \nPor favor, tente novamente mais tarde.");
         }      
         else{

@@ -2,7 +2,7 @@
   min-height: calc(100vh - 90px);
   display:grid;
   grid-template-columns: max-content auto;
-  grid-template-rows: min-content auto;
+  grid-template-rows: min-content 1fr;
   grid-template-areas: "sidemenu section-title" "sidemenu bodyarea";
 }
 

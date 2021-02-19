@@ -31,14 +31,14 @@ export default function HeaderProf(){
           </NavDropdown>
 
           <NavDropdown className="drop-menu" title="Ensino" id="h-ensino">
-            <NavDropdown.Item className="drop-menu-professor-opt" as={Link} to="/professor/material-docente" eventKey="3.1">Artigos</NavDropdown.Item>
-            <NavDropdown.Item className="drop-menu-professor-opt" as={Link} to="/professor/material-docente" eventKey="3.2">Tutoriais</NavDropdown.Item>
+            <NavDropdown.Item className="drop-menu-professor-opt" as={Link} to="/professor/material-docente/artigos" eventKey="3.1">Artigos</NavDropdown.Item>
+            <NavDropdown.Item className="drop-menu-professor-opt" as={Link} to="/professor/material-docente/tutoriais" eventKey="3.2">Tutoriais</NavDropdown.Item>
             <NavDropdown.Item className="drop-menu-professor-opt" as={Link} to="/professor/material-docente/por-serie" eventKey="3.3">Por série</NavDropdown.Item>
           </NavDropdown>
 
           <NavDropdown className="drop-menu" title="Aprendizado" id="h-aprendizado">
-            <NavDropdown.Item className="drop-menu-professor-opt" as={Link} to="/professor" eventKey="4.1">Histórias</NavDropdown.Item>
-            <NavDropdown.Item className="drop-menu-professor-opt" as={Link} to="/professor" eventKey="4.2">Exercícios</NavDropdown.Item>
+            <NavDropdown.Item className="drop-menu-professor-opt" as={Link} to="/professor/aprendizado/conteudo" eventKey="4.1">Conteúdo</NavDropdown.Item>
+            <NavDropdown.Item disabled className="drop-menu-professor-opt" as={Link} to="/professor/aprendizado/exercicios" eventKey="4.2">Exercícios</NavDropdown.Item>
             <NavDropdown.Item className="drop-menu-professor-opt" as={Link} to="/professor" eventKey="4.3">Por série</NavDropdown.Item>
           </NavDropdown>
 

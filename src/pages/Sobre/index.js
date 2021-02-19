@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import Footer from '../../templates/Footer';
 import Header from '../../templates/Header';
-import HeaderProf from '../../templates/Header/HeaderProf.js';
 import HeaderSchool from '../../templates/Header/HeaderSchool.js';
 import HeaderStudent from '../../templates/Header/HeaderStudent.js';
 import SectionTitle from '../../components/SectionTitle';
@@ -20,7 +19,6 @@ export default function Sobre(props){
     }
   },[])
 
-  console.log("THEME: ", props.theme)
   return(
     <>
       { props.theme==="professor" ? null : 

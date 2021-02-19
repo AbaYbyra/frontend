@@ -7,8 +7,6 @@ import './ProfessorList.css';
 
 function ProfessorList(props){
   let [professors, setProfessors] = useState([])
-  console.log(props.user.user.escola_id)
-
   useEffect(()=>{
     fetch(`http://abaybyra-online.umbler.net/professores_post`, { 
       method: "post",headers: {
@@ -21,10 +19,8 @@ function ProfessorList(props){
     .then(resposta => resposta.json())
     .then(res => {
       if(typeof res.errno != "undefined"){
-        console.log(res.code)
       }
       else{
-        console.log(res)
         setProfessors(res)
       }
       

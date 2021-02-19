@@ -30,15 +30,15 @@ export default function HeaderSchool(){
           </NavDropdown>
 
           <NavDropdown className="drop-menu" title="Docente" id="h-docente">
-            <NavDropdown.Item className="drop-menu-school" as={Link} to="/escola" eventKey="3.1">Artigos</NavDropdown.Item>
-            <NavDropdown.Item className="drop-menu-school" as={Link} to="/escola" eventKey="3.2">Tutoriais</NavDropdown.Item>
+            <NavDropdown.Item className="drop-menu-school" as={Link} to="/escola/material-docente/artigos" eventKey="3.1">Artigos</NavDropdown.Item>
+            <NavDropdown.Item className="drop-menu-school" as={Link} to="/escola/material-docente/tutoriais" eventKey="3.2">Tutoriais</NavDropdown.Item>
             <NavDropdown.Item className="drop-menu-school" as={Link} to="/escola/material-docente/por-serie" eventKey="3.3">Por série</NavDropdown.Item>
           </NavDropdown>
 
           <NavDropdown className="drop-menu" title="Discente" id="h-discente">
-            <NavDropdown.Item className="drop-menu-school" as={Link} to="/escola" eventKey="4.1">Histórias</NavDropdown.Item>
-            <NavDropdown.Item className="drop-menu-school" as={Link} to="/escola" eventKey="4.2">Exercícios</NavDropdown.Item>
-            <NavDropdown.Item className="drop-menu-school" as={Link} to="/escola" eventKey="4.3">Por série</NavDropdown.Item>
+            <NavDropdown.Item className="drop-menu-school" as={Link} to="/escola/aprendizado/conteudo" eventKey="4.1">Conteúdo</NavDropdown.Item>
+            <NavDropdown.Item disabled className="drop-menu-school" as={Link} to="/escola/aprendizado/exercicios" eventKey="4.2">Exercícios</NavDropdown.Item>
+            <NavDropdown.Item className="drop-menu-school" as={Link} to="/escola/aprendizado/por-serie" eventKey="4.3">Por série</NavDropdown.Item>
           </NavDropdown>
 
           <NavDropdown className="drop-menu" title="Cadastrados" id="h-cadastrados">

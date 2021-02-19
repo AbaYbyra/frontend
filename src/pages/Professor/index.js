@@ -8,6 +8,7 @@ import MaterialDocenteMenu from '../Professor/MaterialDocente';
 import Profile from '../Profile';
 import SobreProfessor from '../Sobre/SobreProfessor';
 import Contatos from '../Contatos';
+import Aprendizado from '../Aprendizado';
 
 import './Professor.css';
 
@@ -41,6 +42,9 @@ export default function PaginaInicial(){
             </Route>
             <Route path={`${url}/material-docente`}>
               <MaterialDocenteMenu theme="professor"/>  
+            </Route>
+            <Route path={`${url}/aprendizado`}>
+              <Aprendizado theme="professor"/>  
             </Route>
           </Switch>
       </main>

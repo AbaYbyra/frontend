@@ -4,7 +4,6 @@ import './CardBlog.css'
 
 export default function CardBlog(props){
   let { theme, image, title, preview, path } = props;
-  //console.log("IMAGE:", image)
   let color = `var(--color-${theme})`
 
   if(title.length >= 20){

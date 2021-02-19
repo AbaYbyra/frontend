@@ -1,5 +1,5 @@
 import { Route, Switch, useRouteMatch,Link } from 'react-router-dom';
-import { Nav, Accordion, Card } from 'react-bootstrap'
+import { Nav } from 'react-bootstrap'
 import SideMenu from '../../../templates/SideMenu';
 import CardMaterial from '../../../components/CardMaterial';
 import PorSerie from './PorSerie';
@@ -8,9 +8,10 @@ import { Provider } from 'react-redux';
 
 import { Store } from '../../../store';
 import Artigos from '../../Artigos';
+import Tutoriais from '../../Tutoriais';
+
 function MaterialDocenteInicio(props){
   let {url} = props
-  console.log("URL: ", url)
   return(
     <>
       <SectionTitle theme={props.theme}>Material de Ensino</SectionTitle>
@@ -46,7 +47,7 @@ export default function MaterialDocenteMenu(props){
         
           <Nav.Link as={Link} eventKey="1" to={`${url}/por-serie`}>Por série</Nav.Link>
           <Nav.Link eventKey="2" href={`${url}/artigos`}>Artigos</Nav.Link>
-          <Nav.Link eventKey="3" href="#contato">Tutoriais</Nav.Link>
+          <Nav.Link eventKey="3" href={`${url}/tutoriais`}>Tutoriais</Nav.Link>
       </SideMenu>
       
       <Provider store={Store}>
@@ -59,6 +60,9 @@ export default function MaterialDocenteMenu(props){
         </Route>
         <Route path={`${url}/artigos`}>
           <Artigos theme={props.theme}/>  
+        </Route>
+        <Route path={`${url}/tutoriais`}>
+          <Tutoriais theme={props.theme}/>  
         </Route>
       </Switch> 
       </Provider>

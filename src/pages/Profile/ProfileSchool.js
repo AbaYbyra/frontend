@@ -21,34 +21,24 @@ function Profile(props){
 
   const [user, setUser] = useState({});
   
-/*   console.log(props.user.user)
-  console.log(props) */
   useEffect(()=>{
     setUser(props.user.user)
   },[])
 
   function handleSubmit(e){
     e.preventDefault()
-    console.log(e.target)
-    console.log("Enviado")
     fetch("https://abaybyra-online.umbler.net/update_escola", { 
       method: "post",
       body: new FormData(e.target) 
     })
     .then(resposta => resposta.json())
     .then(res => {
-      console.log(res)
-      console.log(typeof res.errors, typeof res.error)
-      console.log(typeof res.errors === 'undefined', typeof res.error === 'undefined')
       if(typeof res.errors === 'undefined' && typeof res.error === 'undefined'){        
         alert("Dados atualizados com sucesso!");
-        console.log(user)
         props.setUser(user)
-        console.log(props.user.user)
       }
       else{
         if(!(typeof res.error === 'undefined')){
-          console.log(res.error)
           alert("Falha na atualização dos dados. \nPor favor, tente novamente mais tarde.");
         }      
         else{

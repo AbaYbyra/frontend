@@ -4,7 +4,7 @@
     "type": "artigo",
     "title": "ENSINANDO SUSTENTABILIDADE PARA CRIANÇAS",
     "author": "Matheus Chiabi",
-    "href": "http://blog.cicloorganico.com.br/sustentabilidade/ensinando-sustentabilidade-para-criancas/",
+    "url": "http://blog.cicloorganico.com.br/sustentabilidade/ensinando-sustentabilidade-para-criancas/",
     "image": "educacion_ambiental.jpg",
     "subject": "educação",
     "text": "Educar as crianças sobre meio ambiente é cuidar do nosso futuro e o bem estar do planeta. Se os adultos de hoje não tiveram uma educação muito expressiva sobre sustentabilidade quando crianças, chegou a hora de mudar esse cenário. Aproveite que crianças são seres curiosos, gostam de coisas novas e se espelham muito nos exemplos dos pais, e assim, introduza a sustentabilidade em suas vidas.\n Antes de sair ensinando dicas sustentáveis, como jogar lixo no lixo, é muito importante que a criança saiba porque essas ações são necessárias, e o que esta acontecendo com o mundo. Caso contrário ela não vai entender nada e não terá interesse em adotar tais medidas. Já pensou em levar o seu filho em um lixão? Assim ele pode ter uma boa noção sobre a importância do descarte de lixo, por exemplo. E que tal ver de perto uma termoelétrica, para ela ver a poluição…",
@@ -13,34 +13,48 @@
   {
     "serie": "6",
     "type": "artigo",
-    "title": "",
-    "author": "",
-    "href": "http://blog.cicloorganico.com.br/sustentabilidade/ensinando-sustentabilidade-para-criancas/",
-    "image": "",
+    "title": "DÁ PARA RECICLAR LIXO ORGÂNICO",
+    "author": "Recicla Sampa",
+    "url": "https://www.reciclasampa.com.br/artigo/voce-sabe-as-diferencas-entre-lixo-organico-e-reciclavel",
+    "image": "lixo_organico_reciclavel.jpg",
     "subject": "organico",
     "text": "",
-    "preview":""
+    "preview":"Você sabe as diferenças entre lixo orgânico e reciclável?"
   },
   {
     "serie": "6",
-    "type": "tutorial",
-    "title": "",
-    "author": "",
-    "href": "",
-    "image": "",
+    "type": "artigo",
+    "title": "Campanha em São Paulo quer melhorar gestão de resíduos orgânicos",
+    "author": "Graça Adjuto",
+    "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2020-11/gestao-de-residuos-organicos-pode-beneficiar-agricultura-e-consumidor",
+    "image": "sp_agricultura.jpg",
     "subject": "organico",
-    "text": "",
-    "preview":""
+    "text": "O investimento em compostagem, que é a reciclagem de resíduos orgânicos - como sobras de alimentos e poda",
+    "preview":"O investimento em compostagem, que é a reciclagem de resíduos orgânicos - como sobras de alimentos e poda"
   },
   {
     "serie": "7",
-    "type": "tutorial",
-    "title": "",
-    "author": "",
-    "href": "",
-    "image": "",
+    "type": "artigo",
+    "title": "Conheça os melhores métodos de reaproveitamento e destinação do plástico",
+    "author": "VG Resíduos",
+    "url": "https://www.vgresiduos.com.br/blog/conheca-os-melhores-metodos-de-reaproveitamento-e-destinacao-do-plastico/",
+    "image": "garrafas_plasticas.jpg",
     "subject": "plastico",
-    "text": "",
-    "preview":""
+    "text": "Grande parte dos produtos que consumismos atualmente são feitos de plástico: embalagens, brinquedos, móveis,",
+    "preview":"Esse é o grande obstáculo: como melhorar essa taxa e reduzir a quantidade deste resíduo?"
+  },
+  {
+    "title":"Composteira doméstica - Como fazer",
+    "type": "tutorial",
+    "url":"https://www.youtube.com/watch?v=o0EYneEPUmQ",
+    "canal":"Epagri Vídeos",
+    "serie":"6"
+  },
+  {
+    "title":"33 IDEIAS DE COMO REUTILIZAR O PLÁSTICO EM CASA",
+    "type":"tutorial",
+    "url":"https://www.youtube.com/watch?v=80Bag5-VjQg",
+    "canal":"Ideias Incríveis GIRLS",
+    "serie": "7"
   }
 ]
