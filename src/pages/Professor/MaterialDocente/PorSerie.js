@@ -1,13 +1,13 @@
 import {useState} from 'react';
-import  Form  from 'react-bootstrap/form'
+import { Form } from 'react-bootstrap'
 import SectionTitle from "../../../components/SectionTitle";
 
 import * as data from '../../../json/material-docente.json';
 import CardBlog from '../../../components/CardBlog';
 
-import './MaterialDocente.css';
+import './PorSerie.css';
 
-export default function MaterialDocente(props){
+export default function PorSerie(props){
   const [selected, setSelected] =  useState();
   const [articles, setArticles] = useState(data.default);
   //const articles = data.default

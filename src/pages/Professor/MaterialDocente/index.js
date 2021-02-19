@@ -2,11 +2,12 @@ import { Route, Switch, useRouteMatch,Link } from 'react-router-dom';
 import { Nav, Accordion, Card } from 'react-bootstrap'
 import SideMenu from '../../../templates/SideMenu';
 import CardMaterial from '../../../components/CardMaterial';
-import MaterialDocente from './MaterialDocente';
+import PorSerie from './PorSerie';
 import SectionTitle from '../../../components/SectionTitle';
 import { Provider } from 'react-redux';
 
 import { Store } from '../../../store';
+import Artigos from '../../Artigos';
 function MaterialDocenteInicio(props){
   let {url} = props
   console.log("URL: ", url)
@@ -44,7 +45,7 @@ export default function MaterialDocenteMenu(props){
       <SideMenu theme={props.theme} title="Material do docente">
         
           <Nav.Link as={Link} eventKey="1" to={`${url}/por-serie`}>Por série</Nav.Link>
-          <Nav.Link eventKey="2" href="#blog">Artigos</Nav.Link>
+          <Nav.Link eventKey="2" href={`${url}/artigos`}>Artigos</Nav.Link>
           <Nav.Link eventKey="3" href="#contato">Tutoriais</Nav.Link>
       </SideMenu>
       
@@ -54,7 +55,10 @@ export default function MaterialDocenteMenu(props){
           <MaterialDocenteInicio theme={props.theme} url={url}/> 
         </Route>
         <Route path={`${url}/por-serie`}>
-          <MaterialDocente theme={props.theme}/>  
+          <PorSerie theme={props.theme}/>  
+        </Route>
+        <Route path={`${url}/artigos`}>
+          <Artigos theme={props.theme}/>  
         </Route>
       </Switch> 
       </Provider>
