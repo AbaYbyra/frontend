@@ -15,7 +15,7 @@ function Login(props){
     e.preventDefault();
     console.log(e.target)
 
-    fetch("http://abaybyra-online.umbler.net/auth_post", { 
+    fetch("https://abaybyra-online.umbler.net/auth_post", { 
       method: "post",
       body: new FormData(e.target) 
     })
@@ -24,7 +24,7 @@ function Login(props){
       console.log(resultado)
       if(resultado[0].professor){
         console.log("RESULTADO 0: ", resultado.professor)
-        fetch("http://abaybyra-online.umbler.net/teacher_profile_post", { 
+        fetch("https://abaybyra-online.umbler.net/teacher_profile_post", { 
           method: "post",
           body: new FormData(e.target) 
         })
@@ -42,7 +42,7 @@ function Login(props){
       }
       else if(resultado[0].escola){
         console.log("RESULTADO 1: ", resultado.escola)
-        fetch("http://abaybyra-online.umbler.net/escola_profile_post", { 
+        fetch("https://abaybyra-online.umbler.net/escola_profile_post", { 
           method: "post",
           body: new FormData(e.target) 
         })

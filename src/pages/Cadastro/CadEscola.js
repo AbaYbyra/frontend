@@ -37,7 +37,7 @@ export default function CadEscola(){
     console.log("EVENTO:", event.target)
     console.log("Values:", event.target.publica.value)
     
-    fetch("http://abaybyra-online.umbler.net/add_escola", 
+    fetch("https://abaybyra-online.umbler.net/add_escola", 
     { method: "POST", 
       body: new FormData(event.target) 
     })

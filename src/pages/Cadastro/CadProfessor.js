@@ -16,7 +16,7 @@ export default function CadProfessor(){
     e.preventDefault()
     console.log("Enviado")
     console.log("EVENTO:", e.target)
-    fetch("http://abaybyra-online.umbler.net/add_prof", 
+    fetch("https://abaybyra-online.umbler.net/add_prof", 
     { method: "POST", 
       body: new FormData(e.target) 
     })

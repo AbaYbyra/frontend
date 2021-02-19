@@ -31,7 +31,7 @@ function Profile(props){
     e.preventDefault()
     console.log(e.target)
     console.log("Enviado")
-    fetch("http://abaybyra-online.umbler.net/update_escola", { 
+    fetch("https://abaybyra-online.umbler.net/update_escola", { 
       method: "post",
       body: new FormData(e.target) 
     })
