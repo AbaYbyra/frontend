@@ -42,15 +42,16 @@ function ProfessorList(props){
           </tr>
           </thead>
           <tbody>
-            <tr>
+            
               {professors && professors.map((professor, index) =>
-                <>
+            
+                <tr>
                   <td>{index + 1}</td>  
                   <td>{professor.nome}</td>
                   <td>{professor.email}</td>
-                </>
-              )}              
-            </tr>
+                </tr>
+                
+              )} 
           </tbody>
         </Table>
       </section>
