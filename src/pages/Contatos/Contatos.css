@@ -1,0 +1,24 @@
+.contato-main{
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.contato-text-forms{
+  max-width: 800px;
+  width: 100%;
+  padding-left: 2rem;
+}
+
+@media (max-width:425px){
+  .contato-main{
+    flex-direction: column;
+  }
+  .contato-text-forms{
+    max-width: 800px;
+    width: 100%;
+    padding: 1rem;
+  }
+}

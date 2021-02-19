@@ -1,0 +1,10 @@
+.main-professor-list{
+  padding: 3rem;
+}
+
+@media (max-width:500px){
+  .main-professor-list{
+    margin:0;
+    padding: 1rem
+  }
+}

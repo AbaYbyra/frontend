@@ -1,0 +1,18 @@
+.cadastro-page{
+  height: 80vh;
+}
+
+.cadastro-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.cadastro-form form{
+  max-width: 650px;
+  width: 90%;
+}
+

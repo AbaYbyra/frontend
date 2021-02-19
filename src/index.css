@@ -1,10 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Siemreap&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 :root{
   --main-color: #79EC77;
   --secondary-color: #126206;
+  --terciary-color: #62A52C;
 
   --color-button-primary: #F83600;
   --color-button-secondary: #BF0000;
   --color-button-terciary: #FAC321;
+
+  --color-student: #45CA42;
+  --color-professor: #F83600;
+  --color-school: #20A7F5;
+
+  --color-student-sec: #79EC77;
+  --color-professor-sec: #FFC1B0;
+  --color-school-sec: #9AD8FF;
 }
 
 body {
@@ -21,7 +35,37 @@ code {
     monospace;
 }
 
+a[disabled]{
+  opacity: 10%;
+}
+a.disabled{
+  color: #d1d1d1 !important;
+}
 /** Pagina inicial **/
 .section-mainpage{
   margin-bottom: 46px;
+}
+.lp-section-title{
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+
+.main-section{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: center;
+  justify-items: center;
+}
+
+.ghost-grid{
+  grid-area: sidemenu;
+}
+
+@media (max-width: 500px){
+  .ghost-grid{
+    height:100vh;
+    bottom:0;
+    position:fixed;
+  }
 }

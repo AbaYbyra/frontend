@@ -1,12 +1,19 @@
-import { Link } from 'react-router-dom';
 import './ButtonAY.css';
 
 function ButtonAY(props){
-  
+  let {onClick, theme, className, children,type,form, disabled} = props;
+
   return(
-    <Link as={'button'} to={props.newPath} className={`button button-${props.theme} ${props.className}`}>
-      {props.texto}
-    </Link>
+    
+    <button
+      className= {`button-ay button-${theme} ${className}`}
+      onClick={onClick}
+      type={type}
+      form={form}
+      disabled={disabled}
+    >
+      {children}
+    </button>
   );
 }
 

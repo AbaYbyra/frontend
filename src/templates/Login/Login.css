@@ -11,6 +11,7 @@
   width:100%;
   height:350px;
   background-image:url('../../assets/bg_verde_claro.svg');
+  margin:0 ;
 }
 
 #form-signin{
@@ -20,17 +21,19 @@
   margin-left: 0 ;
   margin-right: 0;
 }
-
+.input-login.form-control{
+  color: black !important;
+}
 #signin-btn{
   background-color: var(--secondary-color);
 }
 #signup-btn{
   background-color: var(--main-color);
 }
-.dropdown-menu{
-  width:250px;
+.dropdown-menu-login{
+  width:250px !important;
   right:0;
   left:auto;
-  background-color: var(--main-color);
+  background-color: var(--terciary-color);
   border: 0;
 }

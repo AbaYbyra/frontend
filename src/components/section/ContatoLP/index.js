@@ -1,59 +1,62 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
+import ButtonAY from '../../ButtonAY';
 
 import './ContatoLP.css';
 
 export default function ContatoLP(){
-
+  function sendEmail(e){
+    e.preventDefault()
+    alert("Email enviado com sucesso!")
+    document.getElementById("contato-form").reset();
+  }
   return(
     <div style={{backgroundColor:'#E5E5E5', width: '100%', padding: '40px 0px'}} >
     <Container as={'section'} className='section-mainpage' id="contato">
       <div className='half-page'>
-       <h1>Fale Conosco</h1>
+       <h2 className='lp-section-title'>Fale Conosco</h2>
       </div>
-      <Container as={'article'} className="doe-body container-fluid">
-        <Row className="container-fluid"> 
-          <Col xs={12} md={6}>
-            <p>
-              Olá! 
-            </p>
-            <p>
-              Que bom que você chegou até aqui. Isso é sinal que você quer mudar o futuro do nosso planeta para melhor!
-            </p>
-            <p>
-              Você precisa de mais informações sobre implementar Abá Ybyrá na sua escola? 
-              Ou gostaria de ajudar a nossa causa de educar os futuros líderes do planeta? 
-              Então mande uma mensagem para a gente e responderemos o mais rápido possível.
-            </p>
+      <article>
+        <div className="contato-texto">
+          <p>
+            Olá! 
+          </p>
+          <p>
+            Que bom que você chegou até aqui. Isso é sinal que você quer mudar o futuro do nosso planeta para melhor!
+          </p>
+          <p>
+            Você precisa de mais informações sobre implementar Abá Ybyrá na sua escola? 
+            Ou gostaria de ajudar a nossa causa de educar os futuros líderes do planeta? 
+            Então mande uma mensagem para a gente e responderemos o mais rápido possível.
+          </p>
 
-            <Form id="doe-form">
+        </div>
+        <div className="contato-forms-img">
+          <Form id="contato-form" onSubmit={sendEmail}>
+            <Form.Row className="contato-forms-input" >
+              <Col>
+                <Form.Control type="text" placeholder="Nome" required/>
+              </Col> 
+              <Col>
+                <Form.Control type="email" placeholder="Email" required/>
+              </Col>
+            </Form.Row> 
             <Form.Row>
-                <Col>
-                  <Form.Control type="text" placeholder="Nome"/>
-                </Col> 
-                <Col>
-                  <Form.Control type="email" placeholder="Email"/>
-                </Col>
-              </Form.Row> 
-              <Form.Row>
-                <Col>
-                  <Form.Control as="textarea" rows={3} placeholder="Escreva sua mensagem..."/>
-                </Col>
-              </Form.Row>
-              <div className="alignRight">
-                <button type='submit' form='doe-form' className="button button-primary">Enviar</button>
-              </div>
-            </Form>
-            
-          </Col>
-      
+              <Col>
+                <Form.Control as="textarea" rows={3} placeholder="Escreva sua mensagem..." required/>
+              </Col>
+            </Form.Row>
+            <div className="alignRight">
+              <ButtonAY type='submit' form='contato-form' theme="primary" className="button-ay">Enviar</ButtonAY>
+            </div>
+          </Form>
 
-          <Col xs={12} md={6}>
-            <img src={require('../../../assets/ola-contato-cinza.jpg').default} width='70%'/>
-          </Col>
-        </Row>
-      </Container>
+          <div  className="image-contato">
+            <img src={require('../../../assets/ola-contato-cinza.jpg').default} alt="Aba Ybyra dizendo: 'Olá, sou Abá Ybyrá'"/>
+          </div>
+        </div>
+      </article>
     </Container>
     </div>
   );

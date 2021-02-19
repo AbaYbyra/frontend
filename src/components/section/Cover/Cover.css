@@ -1,0 +1,7 @@
+.carousel-item-img{
+  
+  object-fit: contain;
+}
+.carousel-item-img img{
+  object-fit: contain;
+}

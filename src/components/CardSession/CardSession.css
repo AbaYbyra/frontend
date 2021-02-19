@@ -1,0 +1,41 @@
+.cardSession{
+  --side: 240px;
+  width: var(--side);
+  height: var(--side);
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.55);
+  opacity: 80%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center; 
+  color: white;   
+  overflow: hidden;
+}
+.cardSession:hover{
+  color: white;
+  width: calc(var(--side) * 1.1);
+  height: calc(var(--side) * 1.1);
+  transition: 1s;
+}
+
+.imgCardSession{
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+  z-index:-10;
+  position:absolute;
+  /* border-radius: 20px; */
+}
+.textCardSession{
+  font-family: 'Righteous', cursive;
+  margin: 0.5rem;
+  color: white;
+  text-align: left;
+  line-height: 80%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  word-break: break-word; 
+}

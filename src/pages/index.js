@@ -20,7 +20,7 @@ export default function PaginaInicial(){
         <ContatoLP />
       </main>
       <footer>
-        <Footer/>
+        <Footer theme='lp'/>
       </footer>
     </>
   );

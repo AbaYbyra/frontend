@@ -1,0 +1,68 @@
+.cardBlog{
+  width: 250px;
+  height: 350px;
+  border: 2px solid black;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; 
+
+  margin: 10px;
+  padding: 10px;
+  
+}
+
+.img-container-blog{
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.imgCardBlog{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content-block-blog{
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y:auto;
+}
+.content-block-blog::-webkit-scrollbar {
+  width: 5px;
+}
+.content-block-blog::-webkit-scrollbar-thumb { 
+  border-radius: 10px;
+}
+.content-block-blog.professor::-webkit-scrollbar-thumb{
+  background: var(--color-professor);
+}
+.content-block-blog.student::-webkit-scrollbar-thumb{
+  background: var(--color-student);
+}
+.content-block-blog.school::-webkit-scrollbar-thumb{
+  background: var(--color-school);
+}
+.cardBlogTitle{
+  font-family: 'Roboto',sans-serif;
+  
+  font-weight: bold;
+}
+
+.cardBlogPreview{
+  font-family: 'Siemreap', sans-serif;
+  margin: 0.5rem;
+  text-align: left;
+}
+
+.link-card-blog{
+  color: var(--color-school);
+  font-weight: bold;
+  align-self: flex-end;
+}

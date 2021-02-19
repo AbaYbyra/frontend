@@ -1,8 +1,24 @@
 .footer-lp{
   background-image:url('../../assets/bg_verde_claro.svg');
   color: white;
+  bottom: 0;
 }
 
+.footer-professor{
+  background-image:url('../../assets/bg_professor.png');
+  color: white;
+  bottom: 0;
+}
+.footer-student{
+  background-image:url('../../assets/bg_student.png');
+  color: white;
+  bottom: 0;
+}
+.footer-school{
+  background-image:url('../../assets/bg_school.png');
+  color: white;
+  bottom: 0;
+}
 
 .footer-body{
   display: flex;
@@ -32,7 +48,14 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  margin-right:1rem;
+  margin-right:0 !important;
+}
+.footer-social-media p {
+  margin-bottom: 0;
+}
+.footer-social-media div{
+  display: flex;
+  flex-direction: row;
 }
 .footer-social-media img{
   width: 50px;
@@ -42,3 +65,9 @@
 .footer-copyright{
   color: white;
 }
+
+@media (max-width:375px){
+  .footer-social-media{
+    flex-direction: column;
+  }
+} 
