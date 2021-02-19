@@ -63,9 +63,9 @@ function Login(props){
     history.push('/cadastrar');
   }
   return(
-    <div id="login-container " className= "dropdown-menu-login collapse container-fluid justify-content-end p-0">
+    <div id="login-container" className= "dropdown-menu-login collapse container-fluid justify-content-end p-0">
       
-      <div id='login' className="p-0 float-right d-lg-flex flex-column">  
+      <div id='login' className="float-right d-lg-flex flex-column">  
         <Form id="form-signin" onSubmit={login}> 
           <div className="email-container form-group">
             <label htmlFor="email">Email</label>

@@ -36,7 +36,7 @@ code {
 }
 
 a[disabled]{
-  opacity: 10%;
+  opacity: 0.8;
   pointer-events: none;
 }
 a.disabled{
