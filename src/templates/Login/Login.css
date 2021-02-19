@@ -25,6 +25,8 @@
 }
 .input-login.form-control{
   color: black !important;
+  font-size: 1rem;
+  font-weight: 400;
 }
 #signin-btn{
   background-color: var(--secondary-color);
