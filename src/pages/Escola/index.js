@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import {Provider } from 'react-redux';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import HeaderSchool from '../../templates/Header/HeaderSchool.js';
@@ -13,11 +15,19 @@ import ProfessorList from '../ProfessorList';
 import Aprendizado from '../Aprendizado';
 
 import { Store } from '../../store';
+import * as UserAction from '../../actions/userActions';
 import './Escola.css';
 
 
 
-export default function PaginaInicial(){
+function Escola(props){
+  useEffect(()=>{
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser);
+      props.setUser(foundUser);
+    }
+  },[])
   let { path, url } = useRouteMatch();
   return(
     <>
@@ -61,3 +71,10 @@ export default function PaginaInicial(){
     </>
   );
 }
+const mapStateToProps = state =>({
+  user: state.user
+})
+const mapDispatchToProps = (dispatch) => 
+      bindActionCreators(UserAction, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Escola)

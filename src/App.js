@@ -1,16 +1,16 @@
+import axios from 'axios';
 import { Switch, Route } from 'react-router-dom';
 import PaginaInicial from './pages';
 import Sobre from './pages/Sobre';
 import Teste from './pages/Teste';
 import Professor from './pages/Professor';
 import Cadastro from './pages/Cadastro';
-import InnerBlog from './pages/InnerBlog';
-import Externos from './pages/Externos';
 import Escola from './pages/Escola';
 
 import './App.css';
 
 function App() {
+  
   return (
     <div className="App">
       <Switch>

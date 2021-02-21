@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import HeaderProf from '../../templates/Header/HeaderProf.js';
 import Footer from '../../templates/Footer';
@@ -10,11 +12,19 @@ import SobreProfessor from '../Sobre/SobreProfessor';
 import Contatos from '../Contatos';
 import Aprendizado from '../Aprendizado';
 
+import * as UserAction from '../../actions/userActions';
 import './Professor.css';
 
 
 
-export default function PaginaInicial(){
+function Professor(props){
+  useEffect(()=>{
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser);
+      props.setUser(foundUser);
+    }
+  },[])
   let { path, url } = useRouteMatch();
   return(
     <>
@@ -54,3 +64,11 @@ export default function PaginaInicial(){
     </>
   );
 }
+
+const mapStateToProps = state =>({
+  user: state.user
+})
+const mapDispatchToProps = (dispatch) => 
+      bindActionCreators(UserAction, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Professor)

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import { Form} from 'react-bootstrap';
 import {useHistory} from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -9,7 +9,6 @@ import './Login.css';
 
 function Login(props){
   const history = useHistory();
-  const [userstate, setUserState] = useState({});
 
   async function login(e){
     e.preventDefault();
@@ -28,7 +27,11 @@ function Login(props){
         .then(resposta => resposta.json())
         .then(res => {
           if(res){
+            
             props.setUser(res[0])
+            console.log(res[0])
+            localStorage.setItem('user', JSON.stringify(res[0]))
+            
             history.push('/professor')
           }
           else{
@@ -45,6 +48,7 @@ function Login(props){
         .then(res => {
           if(res){
             props.setUser(res[0])
+            localStorage.setItem('user', JSON.stringify(res[0]))
             history.push('/escola')
           }
           else{
