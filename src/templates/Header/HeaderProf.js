@@ -7,10 +7,12 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 
 import * as UserAction from '../../actions/userActions';
+import * as ProfileAction from '../../actions/profileActions';
 
 function HeaderProf(props){
   function logout(e){
     props.setUser({});
+    props.setProfile("notLogged");
     localStorage.clear();
   }
   
@@ -62,6 +64,6 @@ const mapStateToProps = state =>({
   user: state.user
 })
 const mapDispatchToProps = (dispatch) => 
-      bindActionCreators(UserAction, dispatch);
+      bindActionCreators({...UserAction,...ProfileAction}, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(HeaderProf)

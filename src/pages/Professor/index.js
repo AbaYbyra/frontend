@@ -25,6 +25,7 @@ function Professor(props){
       props.setUser(foundUser);
     }
   },[])
+  console.log(props)
   let { path, url } = useRouteMatch();
   return(
     <>
@@ -66,7 +67,8 @@ function Professor(props){
 }
 
 const mapStateToProps = state =>({
-  user: state.user
+  user: state.user,
+  profile:state.profile
 })
 const mapDispatchToProps = (dispatch) => 
       bindActionCreators(UserAction, dispatch);
