@@ -31,7 +31,6 @@ function Login(props){
             
             props.setUser(res[0])
             props.setProfile("professor")
-            console.log(res[0])
             localStorage.setItem('user', JSON.stringify(res[0]))
             localStorage.setItem('profile', "professor")
             history.push('/professor')

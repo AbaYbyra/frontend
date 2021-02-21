@@ -30,7 +30,6 @@ function App(props) {
     }
     setLoaded(true)
   },[])
-  console.log(props.profile)
   return (
     <div className="App">
       <Switch>

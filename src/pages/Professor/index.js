@@ -25,7 +25,6 @@ function Professor(props){
       props.setUser(foundUser);
     }
   },[])
-  console.log(props)
   let { path, url } = useRouteMatch();
   return(
     <>
