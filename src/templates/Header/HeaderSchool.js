@@ -1,14 +1,20 @@
 import React from 'react';
-import { useState } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import {Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { NavLink, NavItem, Dropdown } from 'react-bootstrap';
-import Login from '../Login';
+
 import './Header.css';
 
-export default function HeaderSchool(){
+import * as UserAction from '../../actions/userActions';
+import * as ProfileAction from '../../actions/profileActions';
+function HeaderSchool(props){
 
-  const [username,setUserName] = useState("");
+  function logout(e){
+    props.setUser({});
+    props.setProfile("notLogged");
+    localStorage.clear();
+  }
   
   return(
     <Navbar className="navbar-header-school" expand="lg" variant="dark">
@@ -20,7 +26,7 @@ export default function HeaderSchool(){
         <Nav className="header-content">
           <NavDropdown className="drop-menu" title="Meu Perfil" id="h-perfil">
             <NavDropdown.Item className="drop-menu-school" as={Link} to="/escola/perfil" eventKey="1.1">Dados</NavDropdown.Item>
-            <NavDropdown.Item className="drop-menu-school" as={Link} to="/" eventKey="1.2">Sair</NavDropdown.Item>
+            <NavDropdown.Item className="drop-menu-school" onClick={logout} as={Link} to="/" eventKey="1.2">Sair</NavDropdown.Item>
           </NavDropdown>
 
           <NavDropdown className="drop-menu" title="Abá Ybyrá" id="h-abaybyra">
@@ -51,3 +57,10 @@ export default function HeaderSchool(){
     
   );
 }
+const mapStateToProps = state =>({
+  user: state.user
+})
+const mapDispatchToProps = (dispatch) => 
+      bindActionCreators({...UserAction,...ProfileAction}, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderSchool)

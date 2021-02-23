@@ -36,6 +36,7 @@ function Profile(props){
       if(typeof res.errors === 'undefined' && typeof res.error === 'undefined'){        
         alert("Dados atualizados com sucesso!");
         props.setUser(user)
+        localStorage.setItem('user', JSON.stringify(user))
       }
       else{
         if(!(typeof res.error === 'undefined')){

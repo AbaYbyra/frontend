@@ -1,14 +1,20 @@
 import React from 'react';
-import { useState } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import {Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { NavLink, NavItem, Dropdown } from 'react-bootstrap';
-import Login from '../Login';
+
 import './Header.css';
 
-export default function HeaderProf(){
+import * as UserAction from '../../actions/userActions';
+import * as ProfileAction from '../../actions/profileActions';
 
-  const [username,setUserName] = useState("");
+function HeaderProf(props){
+  function logout(e){
+    props.setUser({});
+    props.setProfile("notLogged");
+    localStorage.clear();
+  }
   
   return(
     <Navbar className="navbar-header-prof" expand="lg" variant="dark">
@@ -21,7 +27,7 @@ export default function HeaderProf(){
           {/* <Nav.Link as={Link} eventKey="1" to="/professor/perfil">Meu Perfil</Nav.Link> */}
           <NavDropdown className="drop-menu" title="Meu Perfil" id="h-perfil">
             <NavDropdown.Item className="drop-menu-professor-opt" as={Link} to="/professor/perfil" eventKey="1.1">Dados</NavDropdown.Item>
-            <NavDropdown.Item className="drop-menu-professor-opt" as={Link} to="/" eventKey="1.2">Sair</NavDropdown.Item>
+            <NavDropdown.Item className="drop-menu-professor-opt" as={Link} onClick={logout} to="/" eventKey="1.2">Sair</NavDropdown.Item>
           </NavDropdown>
 
           <NavDropdown className="drop-menu" title="Abá Ybyrá" id="h-abaybyra">
@@ -53,3 +59,11 @@ export default function HeaderProf(){
     
   );
 }
+
+const mapStateToProps = state =>({
+  user: state.user
+})
+const mapDispatchToProps = (dispatch) => 
+      bindActionCreators({...UserAction,...ProfileAction}, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderProf)

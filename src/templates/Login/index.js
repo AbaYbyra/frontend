@@ -1,15 +1,15 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import { Form} from 'react-bootstrap';
 import {useHistory} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import * as UserAction from '../../actions/userActions';
+import * as ProfileAction from '../../actions/profileActions';
 import './Login.css';
 
 function Login(props){
   const history = useHistory();
-  const [userstate, setUserState] = useState({});
 
   async function login(e){
     e.preventDefault();
@@ -28,7 +28,11 @@ function Login(props){
         .then(resposta => resposta.json())
         .then(res => {
           if(res){
+            
             props.setUser(res[0])
+            props.setProfile("professor")
+            localStorage.setItem('user', JSON.stringify(res[0]))
+            localStorage.setItem('profile', "professor")
             history.push('/professor')
           }
           else{
@@ -45,6 +49,9 @@ function Login(props){
         .then(res => {
           if(res){
             props.setUser(res[0])
+            props.setProfile("escola")
+            localStorage.setItem('user', JSON.stringify(res[0]))
+            localStorage.setItem('profile', "escola")
             history.push('/escola')
           }
           else{
@@ -86,9 +93,10 @@ function Login(props){
 }
 
 const mapStateToProps = state =>({
-  user: state.user
+  user: state.user,
+  profile: state.profile
 })
 const mapDispatchToProps = (dispatch) => 
-      bindActionCreators(UserAction, dispatch);
+      bindActionCreators({...UserAction, ...ProfileAction}, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login)
